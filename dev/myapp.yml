@@ -1,0 +1,18 @@
+#tomcat\u4E0A\u4E0B\u6587\u914D\u7F6E
+server:
+  servlet:
+    context-path: /myapp/
+
+#\u6570\u636E\u6E90\u914D\u7F6E
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.249:3306/finance?zeroDateTimeBehavior=convertToNull&autoReconnect=true&useUnicode=true&characterEncoding=utf-8
+    username: main
+    password: main
+
+#mybatis\u914D\u7F6E
+mybatis-plus:
+  mapper-locations: classpath:/mapper/xml/*.xml, classpath:/mapper/*.xml
+  global-config:
+    refresh-mapper: true
